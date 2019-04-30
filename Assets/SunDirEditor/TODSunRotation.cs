@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SunDir", menuName = "TOD/SunDir")]
 public class TODSunRotation : ScriptableObject
 {
     [System.Serializable]
