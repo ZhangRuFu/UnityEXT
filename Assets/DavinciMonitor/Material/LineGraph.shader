@@ -97,13 +97,13 @@
 
 						//standard line
 					if(yCoord > 0.995 && yCoord <= 1.000)
-						finalColor = _60Color;
+						finalColor = half4(1, 1, 1, 1);
 
-					if(yCoord > 0.497 && yCoord < 0.503)
+					if(yCoord > 0.495 && yCoord < 0.505)
 						finalColor = _30Color;
 
 					if(yCoord > 0.000 && yCoord < 0.01)
-						finalColor = _0Color;
+						finalColor = half4(1, 1, 1, 1);
 
 					//return finalColor;
 					return finalColor;

@@ -26,8 +26,8 @@ Material:
     m_Floats:
     - PixelSnap: 0
     m_Colors:
-    - _0Color: {r: 1, g: 0, b: 0, a: 1}
+    - _0Color: {r: 1, g: 0.10608761, b: 0, a: 1}
     - _30Color: {r: 1, g: 0.9863347, b: 0, a: 1}
-    - _60Color: {r: 0, g: 1, b: 0, a: 1}
+    - _60Color: {r: 0.3726415, g: 1, b: 0.3726415, a: 1}
     - _Color: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 0.2}
     - _LineColor: {r: 1, g: 0, b: 0.041718483, a: 1}

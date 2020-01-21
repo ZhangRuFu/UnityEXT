@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/DavinciMonitor/MonitorScene.unity
+    guid: f4e5a53878e236e498066572e49afbba
   m_configObjects: {}

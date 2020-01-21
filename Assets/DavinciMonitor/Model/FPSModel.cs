@@ -67,6 +67,21 @@ class FPSQueue
         m_returnArray[Length - 1] = m_returnArray[Length - 2];
         return m_returnArray;
     }
+
+    public void GetMinMaxFPS(out float min, out float max)
+    {
+        min = float.MaxValue;
+        max = float.MinValue;
+        int i = m_startIndex;
+        while (i != m_endIndex)
+        {
+            if (m_data[i] > max)
+                max = m_data[i];
+            if (m_data[i] < min)
+                min = m_data[i];
+            i = (i + 1) % Length;
+        }
+    }
 }
 
 public class FPSModel : IModel
@@ -97,8 +112,6 @@ public class FPSModel : IModel
         for (int i = 0; i < SampleCapicity; ++i)
             m_fpsQueue.Enqueue(0);
 
-        Min = float.MaxValue;
-        Max = -1;
     }
 
     public override void Update()
@@ -115,10 +128,10 @@ public class FPSModel : IModel
             m_fpsQueue.Dequeue();
             m_fpsQueue.Enqueue(FPS);
 
-            if (FPS > Max)
-                Max = FPS;
-            if (FPS < Min)
-                Min = FPS;
+            float min, max;
+            m_fpsQueue.GetMinMaxFPS(out min, out max);
+            Min = min;
+            Max = max;
 
             m_curTime = 0;
             m_frameCount = 0;
